@@ -11,6 +11,17 @@
     <nav class="navbar">
         <div class="nav-left">
             <!-- Aquí va el PHP para mostrar la bandera -->
+            
+            <?php
+                $imgs = [
+                    "it" => "img/banderas/it.png",
+                    "mx" => "img/banderas/mx.png",  
+                    "fr" => "img/banderas/fr.png",
+                    "ar" => "img/banderas/ar.png",
+                ];
+                $pais = $_GET ["pais"];
+                echo "<img src='" . $imgs[$pais] . "' class='flag-icon'> " ;
+            ?>  
             <img src="img/banderas/mx.png" class="flag-icon">
             <h1>PizzaPlaneta</h1>
         </div>
@@ -31,7 +42,29 @@
             <h3>Resumen de tu Orden:</h3>
             
             <!-- Aquí va el PHP para mostrar los datos recibidos -->
-            
+            <?php
+            $nombre = $_POST['nombre'];
+            $correo = $_POST['correo'];
+            $cantidad_pizzas = $_POST['cantidad_pizzas'];
+            $tipo_pizza = $_POST['tipo_pizza'];
+            $picante = $_POST['picante'];
+            $fecha = $_POST['fecha_entrega'];
+            $color = $_POST['color_caja'];
+            $tamano = $_POST["tamano"];
+            $extras = $_POST['extras'];
+            $instrucciones_de_entrega = $_POST['instrucciones']; 
+            echo "<p>Tu nombre: $nombre</p>";
+            echo "<p>Correo: $correo</p>";
+            echo "<p>Cantidad de Pizzas: $cantidad_pizzas</p>";     
+            echo "<p>Tipo de Pizza: $tipo_pizza</p>";
+            echo "<p>Nivel de picante: $picante</p>";
+            echo "<p>Fecha de Entrega: $fecha</p>";
+            echo "<p>Color de la caja de entrega: $color</p>";
+            echo "<p>Tamaño de pizza: $tamano</p>";
+            // echo "<p>Extras: $extras </p>";
+            echo "<p>Instrucciones de Entrega: $instrucciones_de_entrega</p>";        
+
+            ?>
         </div>
         
         <br>
