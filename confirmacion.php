@@ -10,8 +10,6 @@
 <body>
     <nav class="navbar">
         <div class="nav-left">
-            <!-- Aquí va el PHP para mostrar la bandera -->
-            
             <?php
                 $imgs = [
                     "it" => "img/banderas/it.png",
@@ -53,6 +51,9 @@
             $tamano = $_POST["tamano"];
             $extras = $_POST['extras'];
             $instrucciones_de_entrega = $_POST['instrucciones']; 
+            $pais = $_POST['pais']; 
+            
+            echo "<p>Pais: $pais</p>";
             echo "<p>Tu nombre: $nombre</p>";
             echo "<p>Correo: $correo</p>";
             echo "<p>Cantidad de Pizzas: $cantidad_pizzas</p>";     
@@ -61,9 +62,16 @@
             echo "<p>Fecha de Entrega: $fecha</p>";
             echo "<p>Color de la caja de entrega: $color</p>";
             echo "<p>Tamaño de pizza: $tamano</p>";
-            // echo "<p>Extras: $extras </p>";
+            //ar_dump ($extras);
+            echo "<p>Extras:</p>";
+            echo "<ul>";
+            foreach($extras as $extra) {
+                echo "
+                <li>$extra</li>";
+            }
+            echo "</ul>";
             echo "<p>Instrucciones de Entrega: $instrucciones_de_entrega</p>";        
-
+            
             ?>
         </div>
         

@@ -124,7 +124,10 @@
                 </div>
 
                 <!-- Aquí va otro php (Oculto, wuuu) -->
+                <?php
+                echo "<input type='hidden' value='" . $pais . "' name='pais' >";
                 
+                ?>
                 <button type="submit" class="btn-submit">¡Pedir mi Pizza!</button>
             </form>
         </main>
