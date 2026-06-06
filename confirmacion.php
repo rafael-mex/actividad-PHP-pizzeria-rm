@@ -17,10 +17,10 @@
                     "fr" => "img/banderas/fr.png",
                     "ar" => "img/banderas/ar.png",
                 ];
-                $pais = $_GET ["pais"];
+                $pais = $_POST ["pais"];
                 echo "<img src='" . $imgs[$pais] . "' class='flag-icon'> " ;
             ?>  
-            <img src="img/banderas/mx.png" class="flag-icon">
+            <!--<img src="img/banderas/mx.png" class="flag-icon">-->
             <h1>PizzaPlaneta</h1>
         </div>
         <div class="nav-right">
